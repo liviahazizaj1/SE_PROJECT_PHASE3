@@ -27,6 +27,7 @@ User buys —> INDEX —>  log in —> CLIENT INFO <— PRODUCT <—-> EDIT
 # >Class Diagram:
 
 CREATE TABLE orders (
+
     id INT AUTO_INCREMENT PRIMARY KEY,
     firstname VARCHAR(50) NOT NULL,
     lastname VARCHAR(50) NOT NULL,
