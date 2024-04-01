@@ -45,42 +45,35 @@ Product class represents the products available in the pharmacy with attributes 
  # > Sequence Diagrams:
  
  User        Frontend         Backend          Database
- 
-  |             |                |                 |
-  |   Browse    |                |                 |
-  |  Products   |                |                 |
-  |------------>|                |                 |
-  |             |                |                 |
-  |             |   Get          |                 |
-  |             | Products       |                 |
-  |             |<---------------|                 |
-  |             |                |                 |
-  |             |                |                 |
-  |             |   Add          |                 |
-  |             |  to Cart       |                 |
-  |             |--------------->|                 |
-  |             |                |    Update       |
-  |             |                |   Stock &       |
-  |             |                |  Cart Status   |
-  |             |                |<---------------|
-  |             |                |                 |
-  |             |                |                 |
-  |   Proceed   |                |                 |
-  |   to       |                |                 |
-  |   Checkout |                             
-  |------------>|                |                 |
-  |             |                |                 |
-  |             |    Place       |                 |
-  |             |   Order        |                 |
-  |             |--------------->|                 |
-  |             |                |    Update       |
-  |             |                |  Order Status  |
-  |             |                |<---------------|
-  |             |                |                 |
-  |   View      |                |                 |
-  |   Order     |                |                 |
-  |<------------|                |                 |
-  |             |                |                 |
+
+     Browse    
+    Products                  
+  ------------>               
+                  Get          
+                  Products      
+                <---------------
+                   Add         
+                   to Cart       
+                 --------------->
+                                   Update       
+                                  Stock &       
+                                  Cart Status   
+                               <---------------                        
+     Proceed                  
+     to                     
+     Checkout                              
+  ------------>               
+                   Place      
+                  Order        
+               --------------->                 
+                                   Update       
+                                 Order Status  
+                              <---------------
+                              
+     View                   
+     Order                  
+  <-----------              
+                            
 
   # Database Design:
   # 1.Useres table:
@@ -104,17 +97,26 @@ A separate junction table may be used to represent this relationship, with Order
 
 -> |          Pharmacy Website         
 
-|                                   |
-|    1. Browse Products   
-|    2. Search Products            |
-|    3. View Product Details       |
-|    4. Add Product to Cart        |
-|    5. Remove Product from Cart   |
-|    6. View Shopping Cart         |
-|    7. Proceed to Checkout        |
-|    8. Place Order                |
-|    9. View Order History         |
-|   10. Manage Account             |      
+                                   
+    1. Browse Products 
+
+    2. Search Products 
+
+    3. View Product Details 
+
+    4. Add Product to Cart 
+
+    5. Remove Product from Cart
+
+    6. View Shopping Cart    
+
+    7. Proceed to Checkout  
+
+    8. Place Order      
+
+    9. View Order History 
+
+    10. Manage Account                   
 
 > This use case diagram provides a comprehensive overview of the functionalities offered by the pharmacy website, serving as a roadmap for understanding how different users interact with the application.
 # Activity Diagrams:
@@ -146,33 +148,33 @@ A separate junction table may be used to represent this relationship, with Order
              
 # State Diagrams:
 >
-  +---------------------------------------------+
-  |            User Authentication             |
-  +---------------------------------------------+
+ 
+              User Authentication             
+ 
          |
          V
-  +---------------------------------------------+
-  |              Start: User is logged out      |
-  |                                             |
-  |              +------------------+           |
-  |              |                  |           |
-  +------------->|    Logged Out    |<----------+
-                 |                  |
-                 +--------+---------+
+ 
+                Start: User is logged out      
+                                               
+                         
+                                             
+  ------------->|    Logged Out    |<----------
+                                   
+                
                           |
                           V
-                 +--------+---------+
+                 
                  |                  |
-                 |   Authenticating  |
+                 |   Authenticating |
                  |                  |
-                 +--------+---------+
+                 
                           |
                           V
-                 +--------+---------+
+                 
                  |                  |
                  |   Authenticated  |
                  |                  |
-                 +--------+---------+
+                
 -> Use Case Diagram: To give a clear picture of all the features available on the pharmacy website, we built a use case diagram that shows the different actions that different users can take.
 Activity Diagrams: We created an activity diagram that shows the flow of the steps involved in placing an order for a product on the website.
 States Diagrams: To show how users move between the logged-out, authenticating, and authenticated states, we created a state diagram that represents the various authentication states.
