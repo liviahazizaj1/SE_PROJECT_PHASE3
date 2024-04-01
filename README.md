@@ -43,7 +43,9 @@ Pharmacy class represents the pharmacy entity with attributes such as first name
 Product class represents the products available in the pharmacy with attributes such as id, name, description, price, and order date . It includes methods for adding and removing products from the shopping cart.
 
  # > Sequence Diagrams:
+ 
  User        Frontend         Backend          Database
+ 
   |             |                |                 |
   |   Browse    |                |                 |
   |  Products   |                |                 |
@@ -100,11 +102,10 @@ A separate junction table may be used to represent this relationship, with Order
 # Modeling 
 # -> Use case diagram: 
 
-+-----------------------------------
-|          Pharmacy Website         |
-+-----------------------------------+
+-> |          Pharmacy Website         
+
 |                                   |
-|    1. Browse Products            |
+|    1. Browse Products   
 |    2. Search Products            |
 |    3. View Product Details       |
 |    4. Add Product to Cart        |
@@ -113,10 +114,11 @@ A separate junction table may be used to represent this relationship, with Order
 |    7. Proceed to Checkout        |
 |    8. Place Order                |
 |    9. View Order History         |
-|   10. Manage Account             |      |
------------------------------------
+|   10. Manage Account             |      
+
 > This use case diagram provides a comprehensive overview of the functionalities offered by the pharmacy website, serving as a roadmap for understanding how different users interact with the application.
 # Activity Diagrams:
+
  Order Product Activity              
           |
       
@@ -140,8 +142,10 @@ A separate junction table may be used to represent this relationship, with Order
           |
          V
           Confirm Order and Receive             
-             Order Confirmation     
+             Order Confirmation   
+             
 # State Diagrams:
+>
   +---------------------------------------------+
   |            User Authentication             |
   +---------------------------------------------+
