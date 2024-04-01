@@ -20,8 +20,7 @@ User buys —> INDEX —>  log in —> CLIENT INFO <— PRODUCT <—-> EDIT
                |     <—- product
 
                | 
-               
-              USER ——> ORDER 
+             USER ——> ORDER 
 
 # -> Detailed Design
 # >Class Diagram:
@@ -48,8 +47,7 @@ Product class represents the products available in the pharmacy with attributes 
 
      Browse    
     Products                  
-  ------------>               
-                  Get          
+  ------------>    Get          
                   Products      
                 <---------------
                    Add         
@@ -59,7 +57,7 @@ Product class represents the products available in the pharmacy with attributes 
                                   Stock &       
                                   Cart Status   
                                <---------------                        
-     Proceed                  
+   Proceed                  
      to                     
      Checkout                              
   ------------>               
